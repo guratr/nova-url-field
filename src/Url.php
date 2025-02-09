@@ -211,9 +211,11 @@ class Url extends Text
     }
 
     /**
-     * @inheritDoc
+     * Resolve the field's value for display.
+     *
+     * @param  \Laravel\Nova\Resource|\Illuminate\Database\Eloquent\Model|object|array  $resource
      */
-    public function resolveForDisplay($resource, $attribute = null)
+    public function resolveForDisplay($resource, ?string $attribute = null): void
     {
         parent::resolveForDisplay($resource, $attribute);
 
